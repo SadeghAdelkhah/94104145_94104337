@@ -304,7 +304,7 @@ makeCityFromFile(File)
 makeCityFromInput()
 makeCarType()
 makeEngine()
-make
+makeWheel()
 makePlayer()
 buyCarForPlayer()
 
@@ -325,5 +325,17 @@ m1=1..n
 m2=0..n
 </panel_attributes>
     <additional_attributes>10.0;20.0;230.0;20.0;230.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>621</y>
+      <w>1197</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;280.0;1310.0;280.0;1310.0;10.0</additional_attributes>
   </element>
 </diagram>
