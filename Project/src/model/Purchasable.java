@@ -7,7 +7,8 @@ public class Purchasable{
     int Price;
     public int getPrice(){
         return 0;
-    };
+    }
+
 }
 
 interface properties{
