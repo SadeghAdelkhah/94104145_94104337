@@ -6,18 +6,23 @@ import java.util.ArrayList;
  * Created by User on 12/6/2016.
  */
 public class Cross {
-    public ArrayList<Avenue> avenues;
+    public int X;
+    public int Y;
+    public int ID;
+    public int height;
+    public int width;
+    public ArrayList<Road> roads;
 
 
     public Cross(){
-        ArrayList<Avenue> avenues = new ArrayList<>();
+        ArrayList<Road> roads = new ArrayList<>();
     }
 
-    public void addAvenue(Avenue avenue){
-        avenues.add(avenue);
+    public void addRoad(Road road){
+        roads.add(road);
     }
 
-    public Avenue[] getAvenue(){
-        return (Avenue[])this.avenues.toArray();
+    public Road[] getRoads(){
+        return (Road[])this.roads.toArray();
     }
 }

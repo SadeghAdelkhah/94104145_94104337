@@ -8,28 +8,32 @@ import java.util.ArrayList;
 
 public class City {
     private String name;
-    private ArrayList<Avenue> avenues;
-    public Cross[] crosses;
+    private ArrayList<Cross> crosses;
+    private ArrayList<Road> roads;
+
+    public ArrayList<Road> getRoads() {
+        return roads;
+    }
+
+    public void addRoad(Road road, int end, int start) {
+        crosses.get(end).addRoad(road);
+        crosses.get(start).addRoad(road);
+        roads.add(road);
+    }
+
 
     public City(String name){
         this.name = name;
-        ArrayList<Avenue> avenues = new ArrayList<>();
+        ArrayList<Cross> crosses = new ArrayList<>();
+        ArrayList<Road> roads = new ArrayList<>();
 
     }
 
-    public void setName(String name){
-        this.name = name;
+    public Cross[] getCrosses(){
+        return (Cross[])this.crosses.toArray();
     }
 
-    public String getName(){
-        return this.name;
-    }
-
-    public Avenue[] getAvenues(){
-        return (Avenue[])this.avenues.toArray();
-    }
-
-    public void addAvenue(Avenue avenue){
-        avenues.add(avenue);
+    public void addCross(Cross cross){
+        crosses.add(cross);
     }
 }

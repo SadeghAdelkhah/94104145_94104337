@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1008</x>
-      <y>144</y>
+      <x>900</x>
+      <y>126</y>
       <w>189</w>
       <h>162</h>
     </coordinates>
@@ -23,8 +23,8 @@ buyCar()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>153</x>
-      <y>387</y>
+      <x>45</x>
+      <y>369</y>
       <w>234</w>
       <h>171</h>
     </coordinates>
@@ -43,8 +43,8 @@ buyCar()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>135</x>
-      <y>666</y>
+      <x>27</x>
+      <y>648</y>
       <w>189</w>
       <h>117</h>
     </coordinates>
@@ -60,8 +60,8 @@ buyCar()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>324</y>
+      <x>144</x>
+      <y>306</y>
       <w>180</w>
       <h>81</h>
     </coordinates>
@@ -71,8 +71,8 @@ buyCar()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>207</x>
-      <y>549</y>
+      <x>99</x>
+      <y>531</y>
       <w>45</w>
       <h>135</h>
     </coordinates>
@@ -83,8 +83,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>531</x>
-      <y>171</y>
+      <x>423</x>
+      <y>153</y>
       <w>495</w>
       <h>36</h>
     </coordinates>
@@ -95,8 +95,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>693</y>
+      <x>324</x>
+      <y>675</y>
       <w>189</w>
       <h>81</h>
     </coordinates>
@@ -110,8 +110,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>279</x>
-      <y>549</y>
+      <x>171</x>
+      <y>531</y>
       <w>234</w>
       <h>162</h>
     </coordinates>
@@ -122,8 +122,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>729</y>
+      <x>207</x>
+      <y>711</y>
       <w>135</w>
       <h>36</h>
     </coordinates>
@@ -135,10 +135,10 @@ m2=2,3,4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1044</x>
-      <y>432</y>
-      <w>189</w>
-      <h>162</h>
+      <x>936</x>
+      <y>414</y>
+      <w>243</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>Car
 --
@@ -147,6 +147,8 @@ m2=2,3,4</panel_attributes>
 +owner: player
 +X:int
 +Y:int
++speed: int
++vectorAngle: int
 --
 +computeTuneCost()
 +tune()
@@ -157,8 +159,8 @@ m2=2,3,4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1089</x>
-      <y>297</y>
+      <x>981</x>
+      <y>279</y>
       <w>45</w>
       <h>153</h>
     </coordinates>
@@ -169,8 +171,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>729</x>
-      <y>423</y>
+      <x>621</x>
+      <y>405</y>
       <w>189</w>
       <h>135</h>
     </coordinates>
@@ -188,8 +190,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>909</x>
-      <y>468</y>
+      <x>801</x>
+      <y>450</y>
       <w>153</w>
       <h>27</h>
     </coordinates>
@@ -199,8 +201,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>477</x>
-      <y>324</y>
+      <x>369</x>
+      <y>306</y>
       <w>315</w>
       <h>117</h>
     </coordinates>
@@ -211,8 +213,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>783</x>
-      <y>711</y>
+      <x>675</x>
+      <y>693</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -225,8 +227,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>855</x>
-      <y>603</y>
+      <x>729</x>
+      <y>594</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -239,8 +241,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
-      <y>549</y>
+      <x>693</x>
+      <y>531</y>
       <w>27</w>
       <h>180</h>
     </coordinates>
@@ -250,21 +252,21 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
-      <y>549</y>
+      <x>738</x>
+      <y>531</y>
       <w>27</w>
-      <h>72</h>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1278</x>
-      <y>405</y>
-      <w>225</w>
-      <h>225</h>
+      <x>1215</x>
+      <y>378</y>
+      <w>279</w>
+      <h>297</h>
     </coordinates>
     <panel_attributes>Race
 --
@@ -274,19 +276,27 @@ m1=0..n</panel_attributes>
 +playerNumbers: int
 +price: int
 +lapsNumber: int
++playerRatings()
 
 --
 initializeRace(Cross[] crosses, Player[] players)
 startRace()
 isFinished()
-isAccident(Player[] players)</panel_attributes>
+isAccident(Player[] players)
+accident(Car car1, Car car2)
+accident(Car car)
+Rate():Player[]
+damage(Car car1,Car car2)
+damage(Car car)
+
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>387</x>
-      <y>63</y>
+      <x>279</x>
+      <y>45</y>
       <w>153</w>
       <h>270</h>
     </coordinates>
@@ -298,6 +308,7 @@ isAccident(Player[] players)</panel_attributes>
 +players: Player
 
 --
+makeCross()
 initialze()
 makeCity()
 makeCityFromFile(File)
@@ -307,7 +318,6 @@ makeEngine()
 makeWheel()
 makePlayer()
 buyCarForPlayer()
-
 makeRace()
 </panel_attributes>
     <additional_attributes/>
@@ -315,27 +325,27 @@ makeRace()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1188</x>
-      <y>189</y>
-      <w>243</w>
-      <h>234</h>
+      <x>1080</x>
+      <y>171</y>
+      <w>288</w>
+      <h>225</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1..n
 m2=0..n
 </panel_attributes>
-    <additional_attributes>10.0;20.0;230.0;20.0;230.0;240.0</additional_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0;280.0;230.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>621</y>
-      <w>1197</w>
-      <h>270</h>
+      <x>108</x>
+      <y>666</y>
+      <w>1242</w>
+      <h>207</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..n</panel_attributes>
-    <additional_attributes>10.0;180.0;10.0;280.0;1310.0;280.0;1310.0;10.0</additional_attributes>
+    <additional_attributes>10.0;110.0;10.0;210.0;1360.0;210.0;1360.0;10.0</additional_attributes>
   </element>
 </diagram>
