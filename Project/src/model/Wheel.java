@@ -6,4 +6,9 @@ package model;
 public class Wheel {
     public int f_p;
     public int EPS;
+
+    public Wheel(int f_p, int EPS){
+        this.EPS = EPS;
+        this.f_p = f_p;
+    }
 }

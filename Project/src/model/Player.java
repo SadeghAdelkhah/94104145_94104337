@@ -1,15 +1,14 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * Created by User on 12/6/2016.
  */
 public class Player {
-    private String name;
-    private ArrayList<Racing> races;
-    private ArrayList<Car> cars;
+    public String name;
+    public ArrayList<Racing> races;
+    public ArrayList<Car> cars;
     public double money;
     private int reputation = 0;
 
@@ -20,21 +19,26 @@ public class Player {
         cars = new ArrayList<>();
     }
 
-    public boolean tune(int cost, int id){
+    public boolean tune(int cost, int carId){
         if(money >= cost) {
             this.money -= cost;
             Car car = new Car(this);
-            car = this.cars.get(id);
+            car = this.cars.get(carId);
             car.tune();
-            cars.remove(id);
-            cars.add(id, car);
+            cars.remove(carId);
+            cars.add(carId, car);
             return true;
         }
         return false;
     }
 
-    public void addCar(Car car){
-        cars.add(car);
+    public boolean buyCar(Car car){
+        if (car.price <= this.money){
+            this.money -= car.price;
+            cars.add(car);
+            return true;
+        }
+        return false;
     }
 
     public Car[] getCars(){

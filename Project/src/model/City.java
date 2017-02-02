@@ -8,16 +8,14 @@ import java.util.ArrayList;
 
 public class City {
     private String name;
-    private ArrayList<Cross> crosses;
-    private ArrayList<Road> roads;
+    public ArrayList<Cross> crosses;
+    public ArrayList<Road> roads;
 
     public ArrayList<Road> getRoads() {
         return roads;
     }
 
-    public void addRoad(Road road, int end, int start) {
-        crosses.get(end).addRoad(road);
-        crosses.get(start).addRoad(road);
+    public void addRoad(Road road) {
         roads.add(road);
     }
 
