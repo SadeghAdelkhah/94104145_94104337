@@ -247,14 +247,162 @@ public class Racing {
                 int x22 = cars.get(j).X2;
                 int y12 = cars.get(j).Y1;
                 int y22 = cars.get(j).Y2;
-                if((cars.get(i).X2 - cars.get(i).X1) / (cars.get(j).X2 - cars.get(j).X1) == (cars.get(i).Y2 - cars.get(i).Y1) / (cars.get(j).Y2 - cars.get(j).Y1)){
+                if((x2 - x1) / (x22 - x12) == (y2 - y1) / (y22 - y12)){
                 }
                 else{
-                    int x = (x1*x12*y22 - x1*x22*y12 - x2*x12*y22 + x2*x22*y12 - x12*x1*y2 + x12*x2*y1 +x22) / ();
-                    int y =;
-                    if(cars.get(i).X2 > cars.get(i).X1){
-                        if(cars.get(i).Y2 > cars.get(i).Y1){
-                            if(cars.get(i).X1 < x && x < cars.get(i).X2 && cars.get(i).Y1 < y && y < cars.get(i).Y2){
+                    int x = (x1*x12*y22 - x1*x22*y12 - x2*x12*y22 + x2*x22*y12 - x12*x1*y2 + x12*x2*y1 + x22*x1*y2 - x22*x2*y1) / (x22*y2 - x22*y1 - x12*y2 + x12*y1 - x2*y22 + x2*y12 + x1*y22 - x1*y12);
+                    int y = (y22*y1*x2 - y22*y2*x1 - y12*y1*x2 + y12*y2*x1 - y2*y12*x22 + y2*y22*x12 + y12*y1*x22 - y1*y22*x12) / (y22*x2 - y22*x1 - y12*x2 + y12*x1 - y2*x12 + y2*x12 + y1*x22 - y1*x12);
+                    if(x2 > x1){
+                        if(y2 > y1){
+                            if(x1 < x && x < x2 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                        else{
+                            if(x1 < x && x < x2 && y2 < y && y < y1) {
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                    }
+                    else{
+                        if(y2 > y1){
+                            if(x2 < x && x < x1 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                        }
+                    }
+                        else{
+                            if(x2 < x && x < x1 && y2 < y && y < y1) {
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                        }
+                    }
+                    }
+                }
+                int x12 = cars.get(j).X2;
+                int x22 = cars.get(j).X3;
+                int y12 = cars.get(j).Y2;
+                int y22 = cars.get(j).Y3;
+                if((x2 - x1) / (x22 - x12) == (y2 - y1) / (y22 - y12)){
+                }
+                else{
+                    int x = (x1*x12*y22 - x1*x22*y12 - x2*x12*y22 + x2*x22*y12 - x12*x1*y2 + x12*x2*y1 + x22*x1*y2 - x22*x2*y1) / (x22*y2 - x22*y1 - x12*y2 + x12*y1 - x2*y22 + x2*y12 + x1*y22 - x1*y12);
+                    int y = (y22*y1*x2 - y22*y2*x1 - y12*y1*x2 + y12*y2*x1 - y2*y12*x22 + y2*y22*x12 + y12*y1*x22 - y1*y22*x12) / (y22*x2 - y22*x1 - y12*x2 + y12*x1 - y2*x12 + y2*x12 + y1*x22 - y1*x12);
+                    if(x2 > x1){
+                        if(y2 > y1){
+                            if(x1 < x && x < x2 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                        else{
+                            if(x1 < x && x < x2 && y2 < y && y < y1) {
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                    }
+                    else{
+                        if(y2 > y1){
+                            if(x2 < x && x < x1 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                        else{
+                            if(x2 < x && x < x1 && y2 < y && y < y1) {
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                    }
+                }
+                int x12 = cars.get(j).X3;
+                int x22 = cars.get(j).X4;
+                int y12 = cars.get(j).Y3;
+                int y22 = cars.get(j).Y4;
+                if((x2 - x1) / (x22 - x12) == (y2 - y1) / (y22 - y12)){
+                }
+                else{
+                    int x = (x1*x12*y22 - x1*x22*y12 - x2*x12*y22 + x2*x22*y12 - x12*x1*y2 + x12*x2*y1 + x22*x1*y2 - x22*x2*y1) / (x22*y2 - x22*y1 - x12*y2 + x12*y1 - x2*y22 + x2*y12 + x1*y22 - x1*y12);
+                    int y = (y22*y1*x2 - y22*y2*x1 - y12*y1*x2 + y12*y2*x1 - y2*y12*x22 + y2*y22*x12 + y12*y1*x22 - y1*y22*x12) / (y22*x2 - y22*x1 - y12*x2 + y12*x1 - y2*x12 + y2*x12 + y1*x22 - y1*x12);
+                    if(x2 > x1){
+                        if(y2 > y1){
+                            if(x1 < x && x < x2 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                        else{
+                            if(x1 < x && x < x2 && y2 < y && y < y1) {
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                    }
+                    else{
+                        if(y2 > y1){
+                            if(x2 < x && x < x1 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                        else{
+                            if(x2 < x && x < x1 && y2 < y && y < y1) {
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                    }
+                }int x12 = cars.get(j).X4;
+                int x22 = cars.get(j).X1;
+                int y12 = cars.get(j).Y4;
+                int y22 = cars.get(j).Y1;
+                if((x2 - x1) / (x22 - x12) == (y2 - y1) / (y22 - y12)){
+                }
+                else{
+                    int x = (x1*x12*y22 - x1*x22*y12 - x2*x12*y22 + x2*x22*y12 - x12*x1*y2 + x12*x2*y1 + x22*x1*y2 - x22*x2*y1) / (x22*y2 - x22*y1 - x12*y2 + x12*y1 - x2*y22 + x2*y12 + x1*y22 - x1*y12);
+                    int y = (y22*y1*x2 - y22*y2*x1 - y12*y1*x2 + y12*y2*x1 - y2*y12*x22 + y2*y22*x12 + y12*y1*x22 - y1*y22*x12) / (y22*x2 - y22*x1 - y12*x2 + y12*x1 - y2*x12 + y2*x12 + y1*x22 - y1*x12);
+                    if(x2 > x1){
+                        if(y2 > y1){
+                            if(x1 < x && x < x2 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                        else{
+                            if(x1 < x && x < x2 && y2 < y && y < y1) {
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                    }
+                    else{
+                        if(y2 > y1){
+                            if(x2 < x && x < x1 && y1 < y && y < y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                        else{
+                            if(x2 < x && x < x1 && y2 < y && y < y1) {
                                 cars1.add(cars.get(i));
                                 cars1.add(cars.get(j));
                                 return cars1;
