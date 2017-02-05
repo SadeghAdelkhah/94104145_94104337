@@ -237,9 +237,31 @@ public class Racing {
                 }
             }
         }
-        for (int i=0; i<cars.size(); i++){
-            for(int j=0; j<cars.size(); j++){
-//                if(cars.get(i).X1 > cars.get())
+        for (int i = 0; i < cars.size(); i++) {
+            for (int j = 0; j < cars.size(); j++) {
+                int x1 = cars.get(i).X1;
+                int x2 = cars.get(i).X2;
+                int y1 = cars.get(i).Y1;
+                int y2 = cars.get(i).Y2;
+                int x12 = cars.get(j).X1;
+                int x22 = cars.get(j).X2;
+                int y12 = cars.get(j).Y1;
+                int y22 = cars.get(j).Y2;
+                if((cars.get(i).X2 - cars.get(i).X1) / (cars.get(j).X2 - cars.get(j).X1) == (cars.get(i).Y2 - cars.get(i).Y1) / (cars.get(j).Y2 - cars.get(j).Y1)){
+                }
+                else{
+                    int x = (x1*x12*y22 - x1*x22*y12 - x2*x12*y22 + x2*x22*y12 - x12*x1*y2 + x12*x2*y1 +x22) / ();
+                    int y =;
+                    if(cars.get(i).X2 > cars.get(i).X1){
+                        if(cars.get(i).Y2 > cars.get(i).Y1){
+                            if(cars.get(i).X1 < x && x < cars.get(i).X2 && cars.get(i).Y1 < y && y < cars.get(i).Y2){
+                                cars1.add(cars.get(i));
+                                cars1.add(cars.get(j));
+                                return cars1;
+                            }
+                        }
+                    }
+                }
             }
         }
         return null;
