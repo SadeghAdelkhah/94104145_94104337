@@ -12,6 +12,7 @@ public class gameEngine {
     public ArrayList<Engine> engines;
     public ArrayList<Wheel> wheels;
     public ArrayList<Player> players;
+    public ArrayList<Racing> races;
 
     public void addCarTypes(carType carType) {
         this.carTypes.add(carType);
@@ -29,29 +30,33 @@ public class gameEngine {
 
     public void makeCarTypeFromFile(String name, String carTypeAddress) throws IOException {
         getter = new RandomAccessFile(carTypeAddress, "rw");
-        String l;
-        int price = 0, height=0, width=0, weight=0, bodyPower=0, fixingPrice=0, brake=0, accelerate=0, maxSpeed=0, effectiveForceOfFarman=0, StekakAmoodBarMasir=0;
-        while((l = getter.readLine()) != null){
-            while (l != ";"){
-                price = Integer.parseInt(l);
-                height = Integer.parseInt(l = getter.readLine());
-                width = Integer.parseInt(l = getter.readLine());
-                weight = Integer.parseInt(l = getter.readLine());
-                bodyPower = Integer.parseInt(l = getter.readLine());
-                fixingPrice = Integer.parseInt(l = getter.readLine());
-                brake = Integer.parseInt(l = getter.readLine());
-                accelerate = Integer.parseInt(l = getter.readLine());
-                maxSpeed = Integer.parseInt(l = getter.readLine());
-                effectiveForceOfFarman = Integer.parseInt(l = getter.readLine());
-                StekakAmoodBarMasir = Integer.parseInt(l = getter.readLine());
-                getter.readLine();
+        String l = getter.readLine();
+        int price = 0;
+        double height=0.0, width=0.0, bodyPower=0.0, fixingPrice=0, brake=0, accelerate=0, maxSpeed=0, effectiveForceOfFarman=0, StekakAmoodBarMasir=0, weight = 0;
+        while(l.contains("-") == false){
+            if (l.contains(";")) {
+                l = getter.readLine();
             }
+            price = Integer.parseInt(l);
+            System.out.println(l);
+            height = Double.parseDouble(l = getter.readLine());
+            width = Double.parseDouble(l = getter.readLine());
+            weight = Double.parseDouble(l = getter.readLine());
+            bodyPower = Double.parseDouble(l = getter.readLine());
+            fixingPrice = Double.parseDouble(l = getter.readLine());
+            brake = Double.parseDouble(l = getter.readLine());
+            accelerate = Double.parseDouble(l = getter.readLine());
+            maxSpeed = Double.parseDouble(l = getter.readLine());
+            effectiveForceOfFarman = Double.parseDouble(l = getter.readLine());
+            StekakAmoodBarMasir = Double.parseDouble(l = getter.readLine());
             Engine engine = new Engine(accelerate, maxSpeed);
             engines.add(engine);
             Wheel wheel = new Wheel(StekakAmoodBarMasir, effectiveForceOfFarman);
             wheels.add(wheel);
             carType carType = new carType(name, price, wheel, brake, engine, fixingPrice, bodyPower, height, width, weight);
             this.addCarTypes(carType);
+            l = getter.readLine();
+            System.out.println(l);
         }
     }
 
@@ -278,8 +283,27 @@ public class gameEngine {
     }
 
 
-    public void makeRace(Player[] players, int[] crossIDs){
-        
+    public void makeRace(int[] crossIDs, int award, int givingReputation){
+        int i = crossIDs.length;
+        Cross[] crosses = new Cross[i];
+        for (int j=0; j<i; j++){
+            crosses[j] = this.city.crosses.get(crossIDs[i]);
+        }
+        Racing race = new Racing(crosses, award, this.city, givingReputation);
+        this.races.add(race);
+    }
+
+    public void startRace(Racing race){
+        race.startRace();
+    }
+
+    public void raceUpdate(Racing race) throws GameOverException{
+        for (int i=0 ; i< race.cars.size(); i++){
+            race.cars.get(i).move();
+        }
+        if (race.isFinished()){
+            throw new GameOverException();
+        }
     }
 }
 

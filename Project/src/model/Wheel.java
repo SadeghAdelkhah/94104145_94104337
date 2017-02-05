@@ -4,10 +4,10 @@ package model;
  * Created by User on 12/16/2016.
  */
 public class Wheel {
-    public int f_p;
-    public int EPS;
+    public double f_p;
+    public double EPS;
 
-    public Wheel(int f_p, int EPS){
+    public Wheel(double f_p, double EPS){
         this.EPS = EPS;
         this.f_p = f_p;
     }

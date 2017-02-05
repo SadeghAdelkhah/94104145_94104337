@@ -5,18 +5,18 @@ package model;
  */
 public class carType extends Purchasable{
     public String name;
-    public int fixingPrice;
-    public int bodyPower;
-    public int height;
-    public int width;
-    public int weight;
-    public int brake;
+    public double fixingPrice;
+    public double bodyPower;
+    public double height;
+    public double width;
+    public double weight;
+    public double brake;
     public Engine engine;
     public Wheel wheels;
 
     public carType(){}
 
-    public carType(String name, int price, Wheel wheels, int brake, Engine engine,int fixingPrice, int bodyPower,int height, int width, int weight) {
+    public carType(String name, int price, Wheel wheels, double brake, Engine engine,double fixingPrice, double bodyPower,double height, double width, double weight) {
         this.price = price;
         this.height = height;
         this.width = width;
